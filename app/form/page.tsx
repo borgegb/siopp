@@ -1,20 +1,16 @@
 "use client";
+
+import React from "react";
+import { useRouter } from "next/navigation"; // Correctly import useRouter from next/navigation
+
 import { format } from "date-fns";
 import { useEffect, useState } from "react";
 import { supabase } from "@/api.js";
+import Form from "@/components/form";
 import { toast } from "sonner";
 import Navbar from "@/components/navbar";
-import Banner from "@/components/banner";
-import AccordionComponent from "@/components/accordion";
-import Hero from "@/components/hero";
-import Step from "@/components/step";
-import Rating from "@/components/rating";
-import Footer from "@/components/footer";
-import CTA from "@/components/cta";
-import Price from "@/components/price";
 
 export default function Home() {
-  const [customers, setCustomers] = useState<any[]>([]);
   const [subscriptionOptions, setSubscriptionOptions] = useState<
     { id: string; name: string; description?: string }[]
   >([]);
@@ -24,14 +20,14 @@ export default function Home() {
     fetchSubscriptions();
   }, []);
 
+  const router = useRouter();
+
   const fetchCustomers = async () => {
     const { data, error } = await supabase.from("customers").select();
     if (error) {
       console.error("Error fetching customers:", error);
       return;
     }
-
-    setCustomers(data);
   };
 
   const handleFormSubmit = async (formData: any) => {
@@ -55,7 +51,7 @@ export default function Home() {
     } else {
       console.log("Form submitted successfully:", data);
       fetchCustomers(); // Optionally refresh the customers list
-      toast("Customer saved successfully.");
+      router.push("form/submitted");
     }
   };
 
@@ -71,36 +67,19 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Banner />
-      <Navbar />
-      <div className="mb-0 md:mb-6">
-        <Hero />
+    <div>
+      <div className="mb-4">
+        <Navbar />
       </div>
-      <main className="mx-auto max-w-4xl">
-        <div id="price">
-          <Price />
-        </div>
 
-        <div id="how">
-          <Step />
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="w-full max-w-4xl px-4 mb-4 sm:py-8">
+          <Form
+            onFormSubmit={handleFormSubmit}
+            subscriptionOptions={subscriptionOptions}
+          />
         </div>
-        <CTA />
-        <div className="mb-4">
-          <Rating />
-        </div>
-
-        <div className="mt-4 mb-4">
-          <CTA />
-        </div>
-        <div id="faq" className="mb-8 mt-8">
-          <AccordionComponent />
-        </div>
-
-        {/* <h1>Customers</h1>
-        <pre>{JSON.stringify(customers, null, 2)}</pre> */}
-      </main>
-      <Footer />
-    </>
+      </div>
+    </div>
   );
 }

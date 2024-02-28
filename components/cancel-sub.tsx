@@ -34,7 +34,6 @@ export default function CancelSub() {
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-md rounded-lg">
-          {" "}
           <DialogHeader>
             <DialogTitle>Avslutt abonnement</DialogTitle>
             <DialogDescription>
@@ -50,7 +49,7 @@ export default function CancelSub() {
                   Steg 1: Gå til mine sider
                 </h3>
                 <p>
-                  Følg linken og logg in på minesider Telenor.{" "}
+                  Følg linken og logg in på minesider Telenor.
                   <a
                     href="https://www.telenor.no/minesider"
                     target="_blank"
@@ -71,7 +70,7 @@ export default function CancelSub() {
                 <h3 className="text-lg font-semibold">
                   Steg 2: Velg Internett og TV
                 </h3>
-                <p>Trykk på "Internett og TV" ikonet.</p>
+                <p>Trykk på Internett og TV ikonet.</p>
                 <Image
                   src="/steg2-min.png"
                   alt="Steg 2"
@@ -96,7 +95,7 @@ export default function CancelSub() {
                   Steg 4: Avslutt abonnement
                 </h3>
                 <p>
-                  Klikk på "Avslutt abonnement" og følg instruksjonene for å
+                  Klikk på Avslutt abonnement og følg instruksjonene for å
                   bekrefte.
                 </p>
               </div>

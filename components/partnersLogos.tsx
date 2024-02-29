@@ -37,7 +37,7 @@ export default function PartnersLogos() {
         </div>
         <div className="w-1/4 max-w-xs px-2">
           <Image
-            src="/logo-NextGentel.png"
+            src="/logo-next.png"
             alt="NextGentel"
             layout="responsive"
             width={100}

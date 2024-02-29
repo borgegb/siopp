@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Hero() {
   const router = useRouter();
@@ -17,10 +17,9 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/hero5-min.png"
+          alt="Background"
           layout="fill"
           objectFit="cover"
-          quality={75}
-          alt="Background"
         />
         {/* Black layer with opacity */}
         <div className="absolute inset-0 bg-black opacity-30"></div>

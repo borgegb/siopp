@@ -93,6 +93,7 @@ export default function Step() {
                               alt="Steg 1"
                               width={500}
                               height={500}
+                              style={{ objectFit: "cover" }} // Use inline styles to replace objectFit
                             />
                           </a>
                         </p>

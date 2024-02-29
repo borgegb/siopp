@@ -23,9 +23,9 @@ export default function Price() {
         <span className="text-red-500 font-bold text-3xl"> 8244,-</span>
       </p>
       <Link href="/form">
-        <Table className="rounded-md">
+        <Table allowOverflow className="rounded-md">
           <TableBody className="divide-y ">
-            <TableRow className="text-base bg-gray-50">
+            <TableRow className="text-base bg-green-100 border-l-4 border-green-500">
               <TableCell className="">
                 <Image
                   src="/logo-next-icon.png"
@@ -42,12 +42,12 @@ export default function Price() {
                 50 - 1000
                 <span className="text-sm"> mbps</span>
               </TableCell>
-              <TableCell className="space-y-1 font-semibold">
+              <TableCell className="space-y-1 font-semibold relative">
+                <span className="absolute -top-3 right-0 bg-green-500 text-white text-xs py-1 px-2 mr-1 rounded-full z-10">
+                  Billigst
+                </span>
                 399,-
                 <div className="text-xs text-gray-500 line-through">899,-</div>
-                {/* <Button variant={"ghost"} size="icon">
-                  <ArrowRight />
-                </Button> */}
               </TableCell>
             </TableRow>
             <TableRow
@@ -128,7 +128,7 @@ export default function Price() {
                 </Button> */}
               </TableCell>
             </TableRow>
-            <TableRow className="text-base bg-gray-50">
+            <TableRow className="text-base bg-red-100 border-l-4 border-red-500 relative">
               <TableCell className="">
                 <Image
                   src="/logo-telenor-icon.png"
@@ -144,12 +144,12 @@ export default function Price() {
               <TableCell className="text-center leading-tight">
                 100 - 1000 <span className="text-sm"> mbps</span>
               </TableCell>
-              <TableCell className="space-y-1 font-semibold">
+              <TableCell className="space-y-1 font-semibold relative">
+                <span className="absolute -top-3 right-0 mr-1 bg-red-500 text-white text-xs py-1 px-2 rounded-full z-10 whitespace-nowrap">
+                  Populær
+                </span>
                 799,-
                 <div className="text-xs text-gray-500 line-through">1426,-</div>
-                {/* <Button variant={"ghost"} size="icon">
-                  <ArrowRight />
-                </Button> */}
               </TableCell>
             </TableRow>
 

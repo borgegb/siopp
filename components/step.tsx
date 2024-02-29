@@ -42,8 +42,8 @@ export default function Step() {
             </span>
           </h1>
           <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-            Slik får du kampanjepris på bredbånd og TV. Tilgjengelig for alle.
-            Nye kunder starter på steg 2.
+            Slik får du kampanjepris på bredbånd og TV. Nye leverandør? Start på
+            steg 2.
           </p>
         </div>
         <div className="grid items-stretch gap-6 lg:grid-cols-3 lg:gap-12">
@@ -54,7 +54,8 @@ export default function Step() {
             <div className="space-y-2">
               <h2 className="text-xl font-bold">Steg 1</h2>
               <p className=" text-gray-500 dark:text-gray-400 md:text-base md:leading-tight lg:text-lg lg:leading-tight">
-                Avslutt ditt nåværende Telenor abonnement.
+                Avslutt ditt nåværende abonnement. Dette er viktig hvis du skal
+                kunne motta kampanjepris hos din eksisterende leverandør.
               </p>
               <Dialog>
                 <DialogTrigger asChild>
@@ -181,7 +182,7 @@ export default function Step() {
                   size={"sm"}
                   onClick={navigateToForm}
                 >
-                  <a className="text-blue-500">Registrer deg</a>
+                  <a className="text-blue-500">Velg & Bestill</a>
                 </Button>
               </div>
             </div>

@@ -12,6 +12,7 @@ import Rating from "@/components/rating";
 import Footer from "@/components/footer";
 import CTA from "@/components/cta";
 import Price from "@/components/price";
+import PartnersLogos from "@/components/partnersLogos";
 
 export default function Home() {
   const [customers, setCustomers] = useState<any[]>([]);
@@ -74,10 +75,13 @@ export default function Home() {
     <>
       <Banner />
       <Navbar />
-      <div className="mb-0 md:mb-6">
+      <div className="mb-0 md:mb-0">
         <Hero />
       </div>
       <main className="mx-auto max-w-4xl">
+        <div className="">
+          <PartnersLogos />
+        </div>
         <div id="price">
           <Price />
         </div>

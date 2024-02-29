@@ -44,10 +44,11 @@ export default function AccordionComponent() {
               Hvorfor må jeg avslutte mitt abonnement?
             </AccordionTrigger>
             <AccordionContent>
-              Telenor sine kampnajener gjelder kun nye kunder. Når du avslutter
-              ditt eksisterende abonnement, vil du bli regnet som en ny kunde og
-              få tilgang til kampanjeprisen. Vi hjelper deg med å avslutte ditt
-              eksisterende abonnement.
+              Leverandørene sine kampanjer gjelder kun nye kunder. Når du
+              avslutter ditt eksisterende abonnement, vil du bli regnet som en
+              ny kunde og få tilgang til kampanjeprisen. Vi hjelper deg med å
+              avslutte ditt eksisterende abonnement hos din nåværende
+              leverandør.
               <Dialog>
                 <DialogTrigger asChild>
                   <Button variant="ghost" className="text-sm" size={"sm"}>
@@ -154,7 +155,6 @@ export default function AccordionComponent() {
                   </ScrollArea>
                 </DialogContent>
               </Dialog>
-              for mer informasjon.
             </AccordionContent>
           </AccordionItem>
 

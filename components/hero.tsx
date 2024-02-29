@@ -30,7 +30,7 @@ export default function Hero() {
             Kampanjepris på <br className="sm:hidden" /> Bredbånd & TV!
           </h1>
           <p className="mx-auto max-w-[700px] text-white md:text-xl dark:text-gray-400 ">
-            Finn laveste pris til din leverandør eller bytt til ny.
+            Få laveste pris tilgjengelig.
           </p>
           <div className="w-full max-w-sm space-y-2">
             <Button
